@@ -5,12 +5,11 @@ import NavBar from "./NavBar"
 const Layout = ({children}) => {
   return (
     <>
+      <div data-theme="lofi" >
       <NavBar />
-      <div className="font-syne">
-            <main className="sm:container sm:mx-auto">
-              {children}
-            </main>
-        {/* <Footer /> */}
+      <main  className="font-syne">
+            {children}
+          </main>
       </div>
     </>
     

@@ -1,6 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) , [Tailwind CSS](https://tailwindcss.com/) and [daisy Ui](https://daisyui.com/).
+This is a [Next.js](https://nextjs.org/) project created with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) , [Tailwind CSS](https://tailwindcss.com/) and [daisy Ui](https://daisyui.com/).
 
-## Getting Started
+## Yts Movie
+
+- View Available Movie
+- Download Movie(comming soon)
+
+## Getting Started locally
 
 First install the dependency:
 ```bash
