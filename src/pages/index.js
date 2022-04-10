@@ -5,9 +5,10 @@ import Movies from "../components/Movie";
 import { searchMovies } from "../utils/ytsService";
 import ScrollToTop from "react-scroll-to-top";
 
+
 export default function Home({data}) {
 
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState('move')
   const [movies, setMovies] = useState(data)
   const [loading, setLoading] = useState(false)
 
