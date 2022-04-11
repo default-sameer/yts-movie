@@ -37,7 +37,7 @@ export default function Home({data}) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await axios.get("https://yts.mx/api/v2/list_movies.json?limit=50&order_by=desc&sort_by=download_count&genre=Action&minimum_rating=8");
   const {movies} = res.data.data;
   return {

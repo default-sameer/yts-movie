@@ -1,5 +1,5 @@
 import NavBar from "./NavBar"
-
+import { AnimateSharedLayout } from "framer-motion"
 
 
 const Layout = ({children}) => {
@@ -7,9 +7,11 @@ const Layout = ({children}) => {
     <>
       <div data-theme="lofi" >
       <NavBar />
-      <main  className="font-syne">
+        <AnimateSharedLayout>
+          <main  className="font-syne">
             {children}
           </main>
+        </AnimateSharedLayout>
       </div>
     </>
     

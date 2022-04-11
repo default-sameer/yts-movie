@@ -1,7 +1,12 @@
+import { motion } from "framer-motion"
 
 const Search = ({ value, onSearchTextChange }) => {
   return (
     <>
+        <motion.div initial='hidden' animate='visible' variants={{
+          hidden: { scale: .8, opacity: 0 }, 
+          visible: { scale: 1, opacity: 1 , transition: { delay: 0.5 } }
+        }}>
           <div className="flex justify-center align-middle pt-5 sm:pt-10">
               <div className="form-control flex sm:flex-row">
                   <form className="flex pb-5 flex-col sm:flex-row">
@@ -14,6 +19,7 @@ const Search = ({ value, onSearchTextChange }) => {
                   </form>
               </div>
           </div> 
+      </motion.div>
     </>
   )
 }
