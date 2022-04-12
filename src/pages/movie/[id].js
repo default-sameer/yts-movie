@@ -3,6 +3,7 @@ import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { NextSeo } from 'next-seo'
 
 const Movie = ({data}) => {
 
@@ -13,6 +14,7 @@ const Movie = ({data}) => {
   }
   return (
     <>
+     <NextSeo title={data.title_long}  description="Download and Watch Movies"/>
         {/* <button className='btn btn-outline mb-4' onClick={back}>Back</button> */}
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-10 mx-auto">
@@ -48,7 +50,7 @@ const Movie = ({data}) => {
 }
 
 export async function getServerSideProps(context) {
-  const res = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${context.query.id}`)
+  const res = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${context.query.id}&with_images=true`)
   const {movie} = res.data.data
   return{
     props: {

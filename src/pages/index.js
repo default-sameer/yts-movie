@@ -4,6 +4,7 @@ import axios from "axios";
 import Movies from "../components/Movie";
 import { searchMovies } from "../utils/ytsService";
 import ScrollToTop from "react-scroll-to-top";
+import { NextSeo } from "next-seo";
 
 
 export default function Home({data}) {
@@ -29,6 +30,7 @@ export default function Home({data}) {
   }
   return (
     <> 
+      <NextSeo title="The Movie Box"  description="Download and Watch Movies"/>
       <ScrollToTop smooth color="#6f00ff" />
       <Search searchText={searchText} onSearchTextChange={onSearchTextChange} />
       
@@ -38,7 +40,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-  const res = await axios.get("https://yts.mx/api/v2/list_movies.json?limit=50&order_by=desc&sort_by=download_count&genre=Action&minimum_rating=8");
+  const res = await axios.get("https://yts.mx/api/v2/list_movies.json?limit=10&order_by=desc&sort_by=download_count&genre=Action&minimum_rating=8");
   const {movies} = res.data.data;
   return {
     props: {
