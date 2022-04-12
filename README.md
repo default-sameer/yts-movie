@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project created with [`create-next-app`
 ## Yts Movie
 
 - View Available Movie
-- Download Movie(comming soon)
+- Download Movie
 
 ## Getting Started locally
 

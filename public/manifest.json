@@ -1,7 +1,7 @@
 {
-    "theme_color": "#f69435",
-    "background_color": "#f69435",
-    "display": "standalone",
+    "theme_color": "#ffbd59",
+    "background_color": "#ffbd59",
+    "display": "minimal-ui",
     "scope": "/",
     "start_url": "/",
     "name": "Movie Box",
